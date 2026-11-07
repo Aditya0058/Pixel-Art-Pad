@@ -17,7 +17,18 @@ for(let i = 0; i < rows; i++){
     }
 }
 
+
+grid.addEventListener("click", function(event){
+    if(event.target.classList.contains("pixel")){
+        const clickedPixel = event.target;
+        const r = clickedPixel.dataset.row;
+        const c = clickedPixel.dataset.column;
+        console.log(`Pixel clicked ${r}-${c}`);
+        clickedPixel.style.backgroundColor = "black";
+    }
+})
 const cell = document.querySelector(".pixel");
 cell.addEventListener("click", function() {
     console.log("Pixel clicked!");
 });
+
