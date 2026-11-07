@@ -16,3 +16,8 @@ for(let i = 0; i < rows; i++){
         grid.appendChild(cell);
     }
 }
+
+const cell = document.querySelector(".pixel");
+cell.addEventListener("click", function() {
+    console.log("Pixel clicked!");
+});
