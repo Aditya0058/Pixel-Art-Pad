@@ -1,0 +1,11 @@
+#pixel-grid{
+    display: grid;
+    grid-template-columns: repeat(25, 20px);
+}
+
+.pixel {
+    height: 20px;
+    width: 20px;
+    background: white;
+    border: 1px solid #ddd;
+}

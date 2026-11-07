@@ -6,3 +6,13 @@ const matrix = new Array(rows)
 
 console.log(matrix);
 
+const grid = document.getElementById("pixel-grid");
+for(let i = 0; i < rows; i++){
+    for (let j = 0; j < columns; j++) {
+        const cell = document.createElement("div");
+        cell.classList.add('pixel');
+        cell.dataset.row = i;
+        cell.dataset.column = j;
+        grid.appendChild(cell);
+    }
+}
