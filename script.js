@@ -27,8 +27,23 @@ grid.addEventListener("click", function(event){
         clickedPixel.style.backgroundColor = "black";
     }
 })
-const cell = document.querySelector(".pixel");
-cell.addEventListener("click", function() {
-    console.log("Pixel clicked!");
-});
+let isDrawing = false;
+grid.addEventListener('mousedown',function(e){
+    if(e.target.classList.contains("pixel")) {
+        isDrawing = true;
+    }
+})
 
+window.addEventListener('mouseup', function(){
+    isDrawing = false;
+})
+grid.addEventListener('mouseover', function(e){
+    if(isDrawing && e.target.classList.contains("pixel")){
+        let r = e.target.dataset.row;
+        let c = e.target.dataset.column;
+
+        matrix[Number(r)][Number(c)] = 1;
+
+        e.target.style.backgroundColor = "black";
+    };
+})
