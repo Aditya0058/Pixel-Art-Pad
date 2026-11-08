@@ -18,32 +18,29 @@ for(let i = 0; i < rows; i++){
 }
 
 
+let selectedColor = '#00ff00';
+
+let colorPalette = document.getElementById("color-palette");
+colorPalette.addEventListener("click", (e)=>{
+    if(e.target.classList.contains('color-btn')){
+        selectedColor = e.target.dataset.color;
+        
+    }
+})
+
+const customColor = document.getElementById('custom-color');
+customColor.addEventListener("input", ()=> {
+    selectedColor = customColor.value;
+});
+
+
 grid.addEventListener("click", function(event){
     if(event.target.classList.contains("pixel")){
         const clickedPixel = event.target;
-        const r = clickedPixel.dataset.row;
-        const c = clickedPixel.dataset.column;
+        const r = Number(clickedPixel.dataset.row);
+        const c = Number(clickedPixel.dataset.column);
         console.log(`Pixel clicked ${r}-${c}`);
-        clickedPixel.style.backgroundColor = "black";
+        matrix[r][c] = selectedColor
+        clickedPixel.style.backgroundColor = selectedColor;
     }
-})
-let isDrawing = false;
-grid.addEventListener('mousedown',function(e){
-    if(e.target.classList.contains("pixel")) {
-        isDrawing = true;
-    }
-})
-
-window.addEventListener('mouseup', function(){
-    isDrawing = false;
-})
-grid.addEventListener('mouseover', function(e){
-    if(isDrawing && e.target.classList.contains("pixel")){
-        let r = e.target.dataset.row;
-        let c = e.target.dataset.column;
-
-        matrix[Number(r)][Number(c)] = 1;
-
-        e.target.style.backgroundColor = "black";
-    };
 })

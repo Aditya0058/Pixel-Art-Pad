@@ -10,7 +10,20 @@
     <center>
         <h1>Pixel Art Pad</h1>
         <br>
+        <div id="color-palette">
+            <button data-color="#000000" class="color-btn">Black</button>
+            <button data-color="#ffffff" class="color-btn">White</button>
+            <button data-color="#ff0000" class="color-btn">Red</button>
+            <button data-color="#0000ff" class="color-btn">Blue</button>
+            <button data-color="#00ff00" class="color-btn">Green</button>
+            <label for="colorPicker">Choose a color:</label>
+            <input id="custom-color" type="color" placeholder="Custom">
+            
+        </div>
         <div id="pixel-grid"></div>
+        <div class="extra-ctrls">
+            <button id="reset-btn">Reset Art Pad</button>
+        </div> 
     </center>
     <script src="script.js"></script>
 </body>
