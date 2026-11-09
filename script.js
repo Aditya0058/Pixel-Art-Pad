@@ -18,7 +18,7 @@ for(let i = 0; i < rows; i++){
 }
 
 
-let selectedColor = '#00ff00';
+let selectedColor = '#000000';
 
 let colorPalette = document.getElementById("color-palette");
 colorPalette.addEventListener("click", (e)=>{
@@ -44,3 +44,14 @@ grid.addEventListener("click", function(event){
         clickedPixel.style.backgroundColor = selectedColor;
     }
 })
+
+const printBtn = document.getElementById("print-btn");
+printBtn.addEventListener("click", ()=> {
+    for(let i = 0; i<25; i++){
+        for (let j=0; j<25; j++){
+            let temp = document.querySelector(`.pixel[data-row="${i}"][data-column="${j}"]`);
+            temp.style.backgroundColor = matrix[i][j];
+        }
+    }
+
+});
