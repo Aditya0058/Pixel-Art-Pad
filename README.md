@@ -7,3 +7,6 @@ You can make what ever art you want in 25 X 25 pixel field with any color you wa
 # Why did I built this?
 - To lern javscript DOM 
 - I learned all this from workshop.hackclub.com
+
+# Screenshots
+![alt text](Assets/image.png)
