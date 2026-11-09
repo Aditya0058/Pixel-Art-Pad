@@ -54,6 +54,17 @@ resetBtn.addEventListener("click", ()=>{
         }
     }
 })
+//black canvas btn
+const blackCanvas = document.querySelector(".black-canvas");
+blackCanvas.addEventListener("click", ()=>{
+    for(let i = 0; i<25; i++){
+        for (let j = 0; j<25; j++){
+            let temp = document.querySelector(`.pixel[data-row="${i}"][data-column="${j}"]`);
+            temp.style.backgroundColor = "#000000"
+        }
+    }
+})
+
 
 // // print btn
 // const printBtn = document.getElementById("print-btn");
