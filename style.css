@@ -1,3 +1,15 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: aqua;
+
+}
+
+h1{
+    padding-top: 10px;
+    font-family: ;
+}
+
 #pixel-grid{
     display: grid;
     grid-template-columns: repeat(25, 20px);
@@ -24,5 +36,20 @@
 }
 
 #color-palette button{
-    background-color: aquamarine;
+    /* padding-right: 10px; */
+    border-radius: 10px;
+}
+
+.black{
+    background-color: black;
+    color: white;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
 }
