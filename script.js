@@ -55,25 +55,25 @@ resetBtn.addEventListener("click", ()=>{
     }
 })
 
-// print btn
-const printBtn = document.getElementById("print-btn");
-printBtn.addEventListener("click", ()=> {
-    const pixelSize = 4;
-    const canvas = document.createElement("canvas");
-    canvas.width = 25 * pixelSize;
-    canvas.height = 25 * pixelSize;
-    const ctx = canvas.getContext('2d');
-    for(let i = 0; i<25; i++){
-        for (let j=0; j<25; j++){
-            ctx.fillStyle = matrix[i][j];
-            const x = j * pixelSize;
-            const y = i * pixelSize;
+// // print btn
+// const printBtn = document.getElementById("print-btn");
+// printBtn.addEventListener("click", ()=> {
+//     const pixelSize = 4;
+//     const canvas = document.createElement("canvas");
+//     canvas.width = 25 * pixelSize;
+//     canvas.height = 25 * pixelSize;
+//     const ctx = canvas.getContext('2d');
+//     for(let i = 0; i<25; i++){
+//         for (let j=0; j<25; j++){
+//             ctx.fillStyle = matrix[i][j];
+//             const x = j * pixelSize;
+//             const y = i * pixelSize;
 
-            ctx.fillRect(x, y, pixelSize, pixelSize);
-        }
-    }
-    document.body.appendChild(canvas);
+//             ctx.fillRect(x, y, pixelSize, pixelSize);
+//         }
+//     }
+//     document.body.appendChild(canvas);
 
-});
+// });
 
 
